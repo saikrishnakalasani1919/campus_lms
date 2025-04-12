@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assign Coding Task | Campus Bridge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='codetask.css') }}" />
+</head>
+<body>
+  <aside>
+    <h2>Campus Bridge</h2>
+    <nav>
+      <a href="{{url_for('faculty_dashboard')}}">Dashboard</a>
+      <a href="{{url_for('managecourse')}}">Manage Courses</a>
+      <a href="{{url_for('uploadcourses')}}">Upload Materials</a>
+      <a href="{{url_for('assignments')}}">Assign Assessments</a>
+      <a href="{{url_for('codetask')}}" class="active">Code Tasks</a>
+      
+      <a href="#">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="task-wrapper">
+    <div class="header">
+      <h1>🖥 Assign Coding Task</h1>
+      <span>📅 April 12, 2025</span>
+    </div>
+
+    <section class="task-card">
+      <form action="/assign-task" method="POST" class="task-form" id="task-form">
+        
+        <div class="form-group">
+          <label for="subject">📘 Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select Subject</option>
+            <option value="DSA">Data Structures</option>
+            <option value="ML">Machine Learning</option>
+            <option value="OS">Operating Systems</option>
+            <option value="WD">Web Development</option>
+            <option value="DBS">Database Systems</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="title">📝 Task Title</label>
+          <input type="text" id="title" name="title" placeholder="e.g., Implement Stack using Arrays" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">🧾 Problem Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Describe the problem, constraints, etc." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="input">📥 Sample Input</label>
+          <textarea id="input" name="sample_input" rows="2" placeholder="e.g., 5 10 15" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="output">📤 Sample Output</label>
+          <textarea id="output" name="sample_output" rows="2" placeholder="e.g., 30" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="deadline">📅 Deadline</label>
+          <input type="date" id="deadline" name="deadline" required />
+        </div>
+
+        <button type="submit" class="submit-btn">🚀 Assign Task</button>
+      </form>
+    </section>
+
+    <footer>
+      © 2025 Campus Bridge. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>

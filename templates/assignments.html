@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assign Assessments - Campus Bridge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assignments.css') }}" />
+</head>
+<body>
+  <aside>
+    <h2>Campus Bridge</h2>
+    <nav>
+      <a href="{{url_for('faculty_dashboard')}}">Dashboard</a>
+      <a href="#">Manage Courses</a>
+      <a href="#">Upload Materials</a>
+      <a href="{{ url_for('assignments') }}" class="active">Assessments</a>
+      <a href="#">Code Tasks</a>
+      <a href="#">Analytics</a>
+      <a href="#">Logout</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="header">
+      <h1>📚  Assessments</h1>
+      <span>📅 April 12, 2025</span>
+    </div>
+
+    <div class="card form-card">
+      <form action="/assign-assessment" method="POST" enctype="multipart/form-data">
+        <label for="course">📘 Select Course</label>
+        <select id="course" name="course" required>
+          <option value="">-- Select --</option>
+          <option value="CS101">CS101 - DSA</option>
+          <option value="WD102">WD102 - Web Dev</option>
+        </select>
+
+        <label for="title">📝 Assessment Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g., Trees & Recursion Quiz" required />
+
+        <label for="description">🧾 Instructions</label>
+        <textarea id="description" name="description" placeholder="Enter assessment instructions..." rows="4" required></textarea>
+
+        <label for="due">📅 Due Date</label>
+        <input type="date" id="due" name="due" required />
+
+        <label for="file">📎 Upload File (PDF/DOC)</label>
+        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx" />
+
+        <button type="submit">📤 Assign to Students</button>
+      </form>
+    </div>
+
+    <footer>
+      © 2025 Campus Bridge. All rights reserved.
+    </footer>
+
+  </main>
+</body>
+</html>

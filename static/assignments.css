@@ -1,0 +1,124 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f6fc; /* Light background like faculty dashboard */
+}
+
+aside {
+  width: 240px;
+  background: linear-gradient(to bottom, #1e2a47, #1d7df2); /* Sidebar gradient */
+  color: #ffffff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav a {
+  display: block;
+  color: #cbd5e1; /* Soft gray-blue */
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin: 0.25rem 0;
+  transition: all 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #ffffff;
+  color: #1e2a47;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1e2a47;
+}
+
+.header span {
+  color: #6b7280;
+}
+
+.form-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea,
+form input[type="file"] {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #1e293b;
+}
+
+form button {
+  padding: 0.9rem;
+  background-color: #1d7df2;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #155bc4;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}

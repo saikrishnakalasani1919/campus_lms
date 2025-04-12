@@ -1,0 +1,117 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f1f4f9;
+  color: #333;
+}
+
+aside {
+  width: 240px;
+  background-color: #002c6a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+aside h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #004aad;
+}
+
+main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 26px;
+  color: #004aad;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: green;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav a {
+    margin-bottom: 0;
+  }
+}

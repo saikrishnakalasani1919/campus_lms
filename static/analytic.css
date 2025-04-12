@@ -1,0 +1,124 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f9ff;
+    color: #1a1a1a;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #0d1b2a;
+    color: #f0f0f0;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #0d1b2a;
+  }
+  
+  body.dark-mode h1 {
+    color: #ffffff;
+  }
+  
+  .theme-toggle-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: #132b44;
+  }
+  
+  /* Chart Layout */
+  .chart-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  /* Chart Cards */
+  .chart-card {
+    width: 420px;
+    padding: 25px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .chart-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Dark mode card */
+  body.dark-mode .chart-card {
+    background-color: #1b2e4b;
+    color: #f0f0f0;
+  }
+  
+  /* Card Headers */
+  .chart-card h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: #0d1b2a;
+  }
+  
+  body.dark-mode .chart-card h2 {
+    color: #ffffff;
+  }
+  
+  /* Chart Canvas */
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Optional Progress Bar Styling */
+  .progress-info {
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: linear-gradient(to right, #0d1b2a, #2e5984);
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .chart-card {
+      width: 100%;
+    }
+  }

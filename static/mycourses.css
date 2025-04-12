@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f1f4f9;
+  }
+  
+  aside {
+    width: 240px;
+    background-color: #002c6a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  aside h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background-color: #004aad;
+    transform: scale(1.05);
+  }
+  
+  main {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    color: #004aad;
+    font-size: 26px;
+  }
+  
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .course-card h3 {
+    margin-bottom: 8px;
+    color: #004aad;
+  }
+  
+  .course-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .progress-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    transition: width 0.4s ease;
+  }
+  
+  .percent {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #007bff;
+  }
+  
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      flex-direction: column;
+    }
+    aside {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    nav a {
+      margin-bottom: 0;
+    }
+  }
+  

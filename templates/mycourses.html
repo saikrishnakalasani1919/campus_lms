@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Courses - Campus Bridge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='mycourses.css') }}">
+</head>
+<body>
+  <aside>
+    <h2>Campus Bridge</h2>
+    <nav>
+      <a href="{{ url_for('student_dashboard') }}">Dashboard</a>
+      <a href="{{url_for('my_courses')}}" class="active">My Courses</a>
+      <a href="#">Assignments</a>
+      <a href="{{url_for('coding')}}">Code Practice</a>
+      <a href="#">Skill Tracker</a>
+      <a href="#">Attendance</a>
+      <a href="{{ url_for('analytics') }}">Analytics</a>
+      <a href="{{url_for('logout')}}">Logout</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="header">
+      <h1>My Courses</h1>
+      <span>📅 April 12, 2025</span>
+    </div>
+
+    {% if courses %}
+      {% for course in courses %}
+      <div class="course-card">
+        <h3>{{ course["course_name"] }}</h3>
+        <p><strong>Code:</strong> {{ course['course_code'] }}<br><strong>Semester:</strong> {{ course['semester'] }}</p>
+        <div class="progress-bar">
+          <div class="fill" style="width: 50%"></div>
+        </div>
+        <span class="percent">50% Completed</span>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No courses available yet for your institute.</p>
+    {% endif %}
+
+    <footer>© 2025 Campus Bridge. All rights reserved.</footer>
+  </main>
+</body>
+</html>

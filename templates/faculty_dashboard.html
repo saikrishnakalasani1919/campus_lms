@@ -1,33 +1,58 @@
-
-<!-- faculty_dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Faculty Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Bridge Faculty Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='faculty.css') }}">
+
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="text-center mb-4">
-      <h1 class="text-primary">Welcome, Prof. {{ user.full_name }}</h1>
-      <p class="lead">Faculty Dashboard Overview</p>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card bg-gradient-info text-white p-3">
-          <h4>Courses Teaching</h4>
-          <p>{{ courses_count }}</p>
-        </div>
+  <aside>
+    <h2>Campus Bridge</h2>
+    <nav>
+      <a href="{{ url_for('faculty_dashboard') }}" class="active">Dashboard</a>
+      <a href="{{url_for('managecourse')}}">Manage Courses</a>
+      <a href="{{url_for('uploadcourses')}}">Upload Materials</a>
+      <a href="{{url_for('assignments')}}">Assignments</a>
+      <a href="{{url_for('codetask')}}">Code Tasks</a>
+      
+      <a href="{{url_for('logout')}}">Logout</a>
+    </nav>
+  </aside>
+   <main>
+    <header class="top-header">
+      <h1>Welcome, <span class="highlight">{{name}}</span></h1>
+      <span class="date">📅 April 12, 2025</span>
+    </header>
+
+    <section class="card-grid">
+      <div class="card">
+        <h3>📘 CS101 - DSA</h3>
+        <p>Next lecture: Trees & Recursion</p>
+        <div class="status">👥 25 students enrolled</div>
       </div>
-      <div class="col-md-6">
-        <div class="card bg-gradient-success text-white p-3">
-          <h4>Student Feedback</h4>
-          <p>{{ feedback_score }}</p>
-        </div>
+      <div class="card">
+        <h3>📤 Upload Materials</h3>
+        <p>PDF, PPT & quizzes for next session</p>
+        <div class="status">📅 Due this week</div>
       </div>
-    </div>
-  </div>
+      <div class="card">
+        <h3>📝 Assignments</h3>
+        <p>Review pending: 12 submissions</p>
+        <div class="status">Check Submissions 📩</div>
+      </div>
+      <div class="card">
+        <h3>📊 Analytics</h3>
+        <p>Student progress dashboard & stats</p>
+        <div class="status">Updated weekly</div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Campus Bridge. Built for smart educators.
+    </footer>
+  </main>
+
 </body>
 </html>

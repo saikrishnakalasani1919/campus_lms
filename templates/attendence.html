@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Attendance | Campus Bridge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="att-stu.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Campus Bridge</div>
+    <nav class="nav">
+      <a href="#">Dashboard</a>
+      <a href="#">Courses</a>
+      <a href="#">Profile</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <h2>Attendance Overview</h2>
+    <div class="chart-container">
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  </main>
+
+  <script>
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    const attendanceChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Web Development', 'Database Systems', 'Operating Systems', 'Machine Learning', 'Data Structures'],
+        datasets: [{
+          label: 'Attendance (%)',
+          data: [90, 92, 88, 85, 95],
+          backgroundColor: [
+            '#1a3d7c', // Dark Blue
+            '#4f8bd6', // Light Blue
+            '#2c7a7b', // Teal
+            '#e76f51', // Coral
+            '#f4a261'  // Orange
+          ],
+          borderRadius: 10,
+          barThickness: 50,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              stepSize: 10
+            },
+            title: {
+              display: true,
+              text: 'Percentage (%)',
+              color: '#1a3d7c',
+              font: {
+                weight: 'bold'
+              }
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Subjects',
+              color: '#1a3d7c',
+              font: {
+                weight: 'bold'
+              }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: '#4f8bd6',
+            titleColor: '#fff',
+            bodyColor: '#fff',
+            borderColor: '#1a3d7c',
+            borderWidth: 1
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
