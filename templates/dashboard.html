@@ -1,0 +1,68 @@
+<!-- File: templates/dashboard-v2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campus Bridge - Dashboard V2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <button id="menuBtn" onclick="toggleSidebar()" class="btn text-white">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand ms-3" href="#">Campus Bridge</a>
+      <div class="d-flex ms-auto">
+        <a class="btn btn-light me-2" href="/login">Login</a>
+        <a class="btn btn-light me-2" href="/register">Register</a>
+        <a class="btn btn-light" href="/logout">Logout</a>
+      </div>
+      
+    </div>
+  </nav>
+
+  <div id="sidebar">
+    <a href="#">Dashboard</a>
+    <a href="#">My Courses</a>
+    <a href="#">Assignments</a>
+    <a href="#">Coding Practice</a>
+    <a href="#">Badges</a>
+    <a href="#">Job Match</a>
+  </div>
+
+  <div class="container mt-4">
+    <h3 class="mb-4">Welcome, {{ student_name }}</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card bg-gradient-success text-white">
+          <div class="card-body">
+            <h5 class="card-title">Courses Enrolled</h5>
+            <p class="fs-3">{{ courses_count }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-gradient-info text-white">
+          <div class="card-body">
+            <h5 class="card-title">Problems Solved</h5>
+            <p class="fs-3">{{ problems_solved }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-gradient-warning text-white">
+          <div class="card-body">
+            <h5 class="card-title">Streak Days</h5>
+            <p class="fs-3">{{ streak_days }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

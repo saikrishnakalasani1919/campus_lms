@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .register-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #ffffffcc;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .btn-light {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .form-control, .form-select {
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  
