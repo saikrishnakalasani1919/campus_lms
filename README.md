@@ -1,17 +1,8 @@
 # Campus Bridge – Integrated Academic LMS + Coding Skill Development Platform
 
 ## Selected Domain  
-Web development![screencapture-127-0-0-1-5000-2025-04-13-01_56_30](https://github.com/user-attachments/assets/5fef22e3-6d70-4a5c-88e3-ac021bc4bd68)
-![Screenshot 2025-04-13 015728](https://github.com/user-attachments/assets/8a8ce8cd-b68c-47d1-b4c9-8a087711938e)
-![Screenshot 2025-04-13 015711](https://github.com/user-attachments/assets/75b28fc9-d008-43a3-9149-f7d38482e05f)
-![Screenshot 2025-04-13 015752](https://github.com/user-attachments/assets/1c1f1464-2e05-48bf-9d62-212532c370e1)
-![Screenshot 2025-04-13 020526](https://github.com/user-attachments/assets/f5545f47-c7be-4a60-9bde-23ea55a3620e)
-![Screenshot 2025-04-13 015811](https://github.com/user-attachments/assets/1cd7e8de-4bb5-46c3-ba3f-45b2e5264e0c)
-![screencapture-127-0-0-1-5000-analytics-2025-04-13-01_58_23](https://github.com/user-attachments/assets/8cb82f18-7c7f-4629-94c6-f7ca91f02f4f)
-![Screenshot 2025-04-13 015916](https://github.com/user-attachments/assets/e64b5696-3baf-42f1-8efd-f2f1eb77fd70)
-![Screenshot 2025-04-13 015932](https://github.com/user-attachments/assets/b60c2245-113d-4f91-9468-53b34ec7810e)
-![screencapture-127-0-0-1-5000-uploadcourses-2025-04-13-02_08_27](https://github.com/user-attachments/assets/4fe28f00-a439-43d6-9f9a-335e7b8281ec)
-![screencapture-127-0-0-1-5000-codetask-2025-04-13-01_59_45](https://github.com/user-attachments/assets/ab1d7dd1-cb9c-4680-b3f5-7601a81040b5)
+Web development! 
+ 
 
 
 ## Problem Statement / Use Case  
@@ -31,6 +22,18 @@ The system allows students to manage courses, practice coding with compiler supp
 ## Project Explanation  
 
 Campus Bridge is divided into major functional modules:
+
+[screencapture-127-0-0-1-5000-2025-04-13-01_56_30](https://github.com/user-attachments/assets/5fef22e3-6d70-4a5c-88e3-ac021bc4bd68)
+![Screenshot 2025-04-13 015728](https://github.com/user-attachments/assets/8a8ce8cd-b68c-47d1-b4c9-8a087711938e)
+![Screenshot 2025-04-13 015711](https://github.com/user-attachments/assets/75b28fc9-d008-43a3-9149-f7d38482e05f)
+![Screenshot 2025-04-13 015752](https://github.com/user-attachments/assets/1c1f1464-2e05-48bf-9d62-212532c370e1)
+![Screenshot 2025-04-13 020526](https://github.com/user-attachments/assets/f5545f47-c7be-4a60-9bde-23ea55a3620e)
+![Screenshot 2025-04-13 015811](https://github.com/user-attachments/assets/1cd7e8de-4bb5-46c3-ba3f-45b2e5264e0c)
+![screencapture-127-0-0-1-5000-analytics-2025-04-13-01_58_23](https://github.com/user-attachments/assets/8cb82f18-7c7f-4629-94c6-f7ca91f02f4f)
+![Screenshot 2025-04-13 015916](https://github.com/user-attachments/assets/e64b5696-3baf-42f1-8efd-f2f1eb77fd70)
+![Screenshot 2025-04-13 015932](https://github.com/user-attachments/assets/b60c2245-113d-4f91-9468-53b34ec7810e)
+![screencapture-127-0-0-1-5000-uploadcourses-2025-04-13-02_08_27](https://github.com/user-attachments/assets/4fe28f00-a439-43d6-9f9a-335e7b8281ec)
+![screencapture-127-0-0-1-5000-codetask-2025-04-13-01_59_45](https://github.com/user-attachments/assets/ab1d7dd1-cb9c-4680-b3f5-7601a81040b5)
 
 1. Landing Page  
 - Professional UI with gradient themes  
