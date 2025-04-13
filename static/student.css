@@ -32,9 +32,11 @@ nav a {
   text-decoration: none;
   margin-bottom: 18px;
   padding: 10px 15px;
+  
   border-radius: 8px;
   transition: background-color 0.3s;
   display: block;
+  font-weight: bold;
 }
 
 nav a:hover,

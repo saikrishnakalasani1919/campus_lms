@@ -1,61 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Bridge - Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Bridge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='landing.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero-section">
+  <header class="hero">
     <nav class="navbar">
-      <div class="logo">Campus Bridge</div>
-      <div class="nav-buttons">
-        <a href="/login" class="btn-login">Login</a>
-        <a href="/register" class="btn-register">Register</a>
+      <div class="brand-name">
+        <span class="cb-primary">Campus</span> <span class="cb-accent">Bridge</span>
+      </div>
+      <div class="nav-links">
+        <a href="/login" class="btn btn-login">Login</a>
+        <a href="/register" class="btn btn-register">Register</a>
       </div>
     </nav>
     <div class="hero-content">
-      <h1>Empowering Students </h1>
-      <p>An integrated platform for learning, coding, and career growth.</p>
-      <a href="#about" class="btn-learn">Learn More</a>
+      <h1>Empowering Future Innovators</h1>
+      <p>Where learning meets opportunity. Join Campus Bridge today!</p>
+      <a href="#about" class="btn btn-learn">Learn More</a>
     </div>
-    <video autoplay muted loop id="bg-video">
-      <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
     
+     
   </header>
 
   <section id="about" class="about-section">
     <h2>About Us</h2>
-    <p>Campus Bridge connects students and educators in a unified academic platform. With AI assistance, analytics, and interactive tools, progress is always within reach.</p>
+    <p>
+      Campus Bridge connects students and educators in a single, innovative academic space.
+      With AI tools, analytics, and coding practice integrated — you're always one step ahead.
+    </p>
   </section>
 
   <section id="courses" class="courses-section">
-    <h2>Our Courses</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-code"></i>
+    <h2>Courses</h2>
+    <div class="course-cards">
+      <div class="course-card">
+        <h3>AI & Machine Learning</h3>
+        <p>Master core AI concepts and implement ML algorithms using real-world datasets.</p>
+      </div>
+      <div class="course-card">
         <h3>Web Development</h3>
-        <p>HTML, CSS, JavaScript, Flask, and more.</p>
+        <p>Learn full-stack web development with HTML, CSS, JavaScript, and Flask.</p>
       </div>
-      <div class="card">
-        <i class="fas fa-database"></i>
+      <div class="course-card">
         <h3>Data Structures</h3>
-        <p>Master core DSA for interviews and beyond.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-robot"></i>
-        <h3>Machine Learning</h3>
-        <p>Build intelligent systems with real-world data.</p>
+        <p>Solidify your foundations with hands-on DSA training and competitive practice.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Campus Bridge. All rights reserved.</p>
+    Made with ❤️ by <span class="footer-highlight">Team Campus Bridge</span>
   </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      const about = document.querySelector('.about-section');
+      const courses = document.querySelector('.courses-section');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      const showOnScroll = (element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          element.classList.add('visible');
+        }
+      };
+
+      showOnScroll(about);
+      showOnScroll(courses);
+    });
+  </script>
 </body>
 </html>
