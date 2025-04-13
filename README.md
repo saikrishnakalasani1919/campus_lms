@@ -1,7 +1,7 @@
 # Campus Bridge – Integrated Academic LMS + Coding Skill Development Platform
 
 ## Selected Domain  
-Web development! 
+Web development
  
 
 
@@ -23,7 +23,7 @@ The system allows students to manage courses, practice coding with compiler supp
 
 Campus Bridge is divided into major functional modules:
 
-[screencapture-127-0-0-1-5000-2025-04-13-01_56_30](https://github.com/user-attachments/assets/5fef22e3-6d70-4a5c-88e3-ac021bc4bd68)
+![screencapture-127-0-0-1-5000-2025-04-13-01_56_30](https://github.com/user-attachments/assets/5fef22e3-6d70-4a5c-88e3-ac021bc4bd68)
 ![Screenshot 2025-04-13 015728](https://github.com/user-attachments/assets/8a8ce8cd-b68c-47d1-b4c9-8a087711938e)
 ![Screenshot 2025-04-13 015711](https://github.com/user-attachments/assets/75b28fc9-d008-43a3-9149-f7d38482e05f)
 ![Screenshot 2025-04-13 015752](https://github.com/user-attachments/assets/1c1f1464-2e05-48bf-9d62-212532c370e1)
