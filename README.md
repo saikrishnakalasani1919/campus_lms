@@ -35,6 +35,8 @@ Campus Bridge is divided into major functional modules:
 ![Screenshot 2025-04-13 015932](https://github.com/user-attachments/assets/b60c2245-113d-4f91-9468-53b34ec7810e)
 ![screencapture-127-0-0-1-5000-uploadcourses-2025-04-13-02_08_27](https://github.com/user-attachments/assets/4fe28f00-a439-43d6-9f9a-335e7b8281ec)
 ![screencapture-127-0-0-1-5000-codetask-2025-04-13-01_59_45](https://github.com/user-attachments/assets/ab1d7dd1-cb9c-4680-b3f5-7601a81040b5)
+![Screenshot 2025-04-13 084136](https://github.com/user-attachments/assets/014054d9-3fb8-4413-907f-c7ee62bfe9af)
+
 
 1. Landing Page  
 - Professional UI with gradient themes  
@@ -57,7 +59,10 @@ Campus Bridge is divided into major functional modules:
 - User-specific dashboards for each role with analytics and tasks  
 - "Welcome, [Name]" greetings for personalized experience
 
-6. Placement Readiness (Upcoming)  
+6. AI chatbot
+ - to clarify student doubts
+
+7. Placement Readiness (Upcoming)  
 - Resume builder, interview prep, company-wise mock tests
 
 ---
