@@ -308,5 +308,26 @@ def ai():
         return redirect(url_for('login'))  # protect route
     return render_template("ai.html")
 
+
+# Show topics for selected course
+@app.route("/course/<int:course_id>")
+def view_course(course_id):
+    topics = fetch_topics(course_id)  # Fetch from course_topics
+    progress = fetch_student_progress(session['user_id'], course_id)  # Join to know which topics are done
+    return render_template("course_view.html", topics=topics, progress=progress)
+
+# AJAX route to update progress
+@app.route("/update_progress", methods=["POST"])
+def update_progress():
+    data = request.json
+    student_id = session['user_id']
+    topic_id = data['topic_id']
+    completed = data['completed']
+
+    # insert or update progress
+    update_topic_progress(student_id, topic_id, completed)
+    return jsonify({"status": "success"})
+
+
 if __name__ == '__main__':
     app.run(debug=True)
